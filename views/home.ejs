@@ -1,0 +1,17 @@
+<div id="landingPage">
+
+        <img id="locksmithLogo" src="/images/locksmith-logo.png"/>
+        <div id="subtitle-div"><span id="subtitle"></span></div>
+        <div id="buttons">
+           <% if (user) { %>
+            <a class="btn intro-button" href="/profile">My Profile</a>&nbsp;&nbsp;<a class="btn intro-button" href="/auth/logout">Logout</a>
+            <% } else { %>
+            <a class="btn intro-button" href="/auth/login">Login</a>&nbsp;&nbsp;<a class="btn intro-button" href="/auth/register">Register</a>
+            <% } %>
+        </div>
+
+</div>
+
+<footer>
+    <p><a href="http://crimsonbrackets.com" target="_blank"><img id="brackets" src="/images/brackets-logo.png"/></a></p>
+</footer>

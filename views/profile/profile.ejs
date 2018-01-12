@@ -1,0 +1,51 @@
+<main class="container">
+   <br/>
+    <h4>Current password collection:</h4>
+    <br/>
+    <table class="stripped">
+        <thead>
+            <tr>
+                <th>Name:</th>
+                <th>Password:</th>
+                <th>Strength:</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if (user.passwords.length === 0) { %>
+                <tr>
+                    <td colspan="4" class="center">No passwords in collection yet</td>
+                </tr>
+                <% } else { %>
+                    <% for(var pass of user.passwords) { %>
+                        <tr>
+                            <td>
+                                <%=pass.name%>
+                            </td>
+                            <td>
+                                <%=pass.password%>
+                            </td>
+                            <td>
+                                <%=pass.strength%>
+                            </td>
+                            <td><a href="/profile/modify/<%=pass._id%>">Modify</a> | <a href="/profile/delete/<%=pass._id%>">Delete</a></td>
+                        </tr>
+                        <% } %>
+                            <% } %>
+
+        </tbody>
+    </table>
+    <br/>
+    <a id="btnNewPassword" class="btn right" href="/profile/newpassword">New Password</a>
+    <br/><br/>
+    <div>
+        <p><b>Number of passwords in collection: <%=user.passwords.length%></b></p>
+<p><b>Average password length: <%=avgLength()%>&nbsp;characters</b></p>
+        <p><b>Average strength of password: <%=avgStrength()%></b></p>
+    </div>
+
+
+
+
+</main>

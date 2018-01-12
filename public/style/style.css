@@ -1,0 +1,362 @@
+html,
+body {
+    background-color: #f9f9f9;
+    color: #252525;
+}
+
+/*extra fonts*/
+
+@font-face {
+    font-family: rainFall;
+    src: url('../fonts/RAINFALL.otf');
+}
+
+/*animations*/
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.content {
+    margin-top: 5vh;
+}
+
+.myNavbar {
+    background-color: #252525 !important;
+}
+
+#landingPage {
+
+    width: 100%;
+    height: 92vh;
+    background: url('/images/locksmith-landing-page-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+}
+
+
+
+#locksmithLogo {
+    width: 75vw;
+    z-index: 1;
+    display: inline;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subtitle-div {
+    position: fixed;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -61%);
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'rainFall';
+    z-index: 5;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+#buttons {
+    display: inline;
+    width: 100%;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    z-index: 2;
+    flex-direction: row;
+
+    padding: 25px;
+    text-align: center;
+
+}
+
+.typed-cursor {
+    animation: blink 0.5s linear infinite;
+}
+
+table tbody tr td a {
+    color: #8208a5 !important;
+}
+
+#buttons a {
+    margin: 0 5px;
+}
+
+#nav-mobile li a:hover {
+    background-color: #353535 !important;
+}
+
+.intro-button {
+    width: 250px !important;
+}
+
+
+
+.input-field input {
+    border-bottom: 1px solid #252525 !important;
+    color: #252525 !important;
+
+}
+
+.input-field label {
+    color: #8208a5 !important;
+}
+
+.input-field input:focus + label {
+    color: #8208a5 !important;
+}
+
+/* label underline focus color */
+
+.input-field input:focus {
+    border-bottom: 1px solid #8208a5 !important;
+    box-shadow: 0 1px 0 0 #8208a5 !important;
+}
+
+.btn {
+    width: 200px;
+    background-color: #8208a5 !important;
+    border: 1px solid #fff;
+    box-shadow: none !important;
+    padding: 0;
+}
+
+.btn:hover {
+    background-color: #cd28fc !important;
+}
+
+footer {
+    background-color: none;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 99;
+    height: 75px;
+
+}
+
+/* valid color */
+
+.input-field input.valid {
+    border-bottom: 1px solid #8208a5 !important;
+    box-shadow: 0 1px 0 0 #8208a5 !important;
+}
+
+/* invalid color */
+
+.input-field input.invalid {
+    border-bottom: 1px solid #d30000 !important;
+    box-shadow: 0 1px 0 0 #d30000 !important;
+}
+
+.card-panel {
+    padding: 10px;
+    height: auto;
+}
+
+#btnNewPassword {
+    width: 200px;
+}
+
+#btnSavePassword {
+    width: 200px;
+}
+
+.google-btn {
+    background-color: #d34836 !important;
+    width: 15vw;
+}
+
+.local-btn {
+
+    width: 200px;
+}
+
+#locksmith-header {
+    width: 250px;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+#brackets {
+    width: 350px;
+    margin-top: -20px;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+
+}
+
+#brackets:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+.google-btn:hover {
+    background-color: rgba(211, 72, 54, 0.85) !important;
+}
+
+.facebook-btn:hover {
+    background-color: rgba(59, 89, 152, 0.85) !important;
+}
+
+.facebook-btn {
+    background-color: #3b5998 !important;
+    width: 15vw;
+}
+
+main {
+
+    margin-top: 25px;
+    padding-bottom: 50px;
+
+}
+
+#btn_logout {
+    background-color: #8208a5 !important;
+    position: fixed;
+    right: 4vw;
+    bottom: 4vh;
+    z-index: 9999;
+}
+
+#btn_login {
+    background-color: #8208a5 !important;
+    position: fixed;
+    right: 4vw;
+    bottom: 4vh;
+    z-index: 9999;
+}
+
+.message {
+    padding: 10px;
+    color: #fff;
+    margin: 10px auto;
+    background-color: #8208a5 !important;
+}
+
+@media screen and (max-width: 600px) {
+    #locksmith-header {
+        display: block;
+        margin-top: 10px;
+        width: 250px;
+  
+    }
+
+    #brackets {
+        width: 300px;
+        margin-top: -20px;
+        opacity: 0.5;
+        transition: opacity 0.5s ease;
+
+    }
+
+    .google-btn {
+
+        width: 100%;
+    }
+
+    .local-btn,
+    .register-btn {
+
+        width: 100%;
+    }
+
+    .facebook-btn {
+        width: 100%;
+    }
+
+    #buttons {
+        width: 100%;
+        top: 80%;
+        padding: 25px;
+        display: block;
+    }
+
+    #buttons a {
+        margin: 0 10px;
+        width: 40% !important;
+    }
+
+    #locksmithLogo {
+        width: 110vw;
+        z-index: 1;
+
+    }
+
+    #subtitle-div {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    #brackets {
+        width: 300px;
+        margin-top: -20px;
+        opacity: 0.5;
+        transition: opacity 0.5s ease;
+
+    }
+    
+    #locksmith-header {
+        width: 250px;
+        
+        margin-left: -20px;
+        
+    }
+    .google-btn {
+
+        width: 48%;
+    }
+
+    .local-btn {
+
+        width: 48%;
+    }
+
+    .facebook-btn {
+        width: 48%;
+    }
+
+    #subtitle-div {
+
+        width: 100%;
+    }
+
+    #buttons {
+        width: 100%;
+        top: 75%;
+        padding: 25px;
+        display: block;
+    }
+
+    #locksmithLogo {
+        width: 110vw;
+        z-index: 1;
+
+    }
+
+
+
+}

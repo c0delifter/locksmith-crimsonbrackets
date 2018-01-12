@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locksmith Password Manager App | [CRIMSON BRACKETS]</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+</head>
+
+<body>
+    <nav class="myNavbar">
+       <div class="nav-wrapper container hide-on-small-only">
+           <a href="/" class="left brand-logo" title="The Locksmith&trade; Password Manager App was created utilizing the following technologies: HTML, CSS, JavaScript, Node.js, Express, MongoDB, CryptoJS, MaterializeCSS, and Typed.js"><img id="locksmith-header" src="/images/locksmith-header.png"/></a>
+            <ul id="nav-mobile" class="right">
+                <% if (user) {%>
+                    <li><a href="/profile">My Profile (<%=user.username%>)</a></li>
+                    <li><a href="/auth/logout">Logout</a></li>
+                    <% } else { %>
+                        <li><a href="/auth/login">Login</a></li>
+                        <% } %>
+            </ul>
+        </div>
+        
+        <div class="show-on-small hide-on-med-and-up nav-wrapper container">
+           <a href="/" class="center brand-logo"><img id="locksmith-header" src="/images/locksmith-header.png"/></a>
+           <ul id="nav-mobile" class="right">
+                
+            </ul>
+        </div>
+    </nav>
+    <div>
+       <% if (success_msg.length > 0) {%>
+        <div class="green message"><%=success_msg%></div>
+        <% } if (error_msg.length > 0) {%> 
+        <div class="red message"><%=success_msg%></div>
+        <% }%> 
+        <%- body %>
+        <% if (user) {%>
+        <a href="/auth/logout" id="btn_logout" class="red btn-floating btn-large waves-effect waves-light right hide-on-med-and-up"><i class="material-icons">exit_to_app</i></a>
+        <% } else {%>
+        <a href="/auth/login" id="btn_login" class="indigo accent-2 btn-floating btn-large waves-effect waves-light right hide-on-med-and-up"><i class="material-icons">touch_app</i></a>
+        <% }%>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/typed.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>

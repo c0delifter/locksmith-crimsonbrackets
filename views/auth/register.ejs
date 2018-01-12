@@ -1,0 +1,53 @@
+<main class="container">
+    <br/>
+    <% if (message.length > 0) { %>
+        <div class="message"><%= message %></div>
+    <% } %>
+    <% if (errors) { %>
+        <% for(var error of errors) { %>
+            <div class="red message">
+                Error:&nbsp;<%=error.msg%>
+            </div>
+            <% } %>
+                <% } %>
+                    <h4>Register New User:</h4>
+                    <div class="row">
+                        <form action="/auth/register" method="post" class="col s12">
+                            <div class="">
+                                <div class="row">
+                                    <div class="input-field col l6 m12 s12">
+                                        <input placeholder="Username" id="reg_username" name="username" type="text" class="validate" autofocus>
+                                        <label for="username">Username</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col l6 m12 s12">
+                                        <input id="password" name="password" type="password" class="validate">
+                                        <label for="password">Password</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col l6 m12 s12">
+                                        <input id="password2" name="password2" type="password" class="validate">
+                                        <label for="password2">Confirm Password</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn local-btn" type="submit">Register</a>&nbsp;
+        </form>
+    </div>
+    <br/>
+    <hr>
+    <br/>
+    <h5>Already have an account? Click here to login instead:</h5>
+    <br/>
+    <a class="btn register-btn" href="/auth/login">Login</a><br/><br/>
+
+    <h5>Alternatively, you can create and/or access your account using either Google+ or Facebook:</h5>
+    <br/>
+    <a class="btn google-btn" href="/auth/google">Google+</a><br/><br/>
+    <a class="btn facebook-btn" href="/auth/facebook">Facebook</a>&nbsp;
+    
+    
+</main>
